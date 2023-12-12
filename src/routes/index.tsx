@@ -5,7 +5,8 @@ import PrivateRoute from "./PravateRoute";
 
 const Home = lazy(() => import("../pages/Home"));
 const NotFound = lazy(() => import("../pages/404"));
-
+const Login = lazy(() => import("../pages/Login"));
+const SignUp = lazy(() => import("../pages/Signup"));
 
 interface AppRoute {
   path: string;
@@ -36,6 +37,14 @@ const routes: AppRoute[] = [
       //   ),
       // },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
   {
     path: "/*",
