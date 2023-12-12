@@ -4,6 +4,7 @@ import Layout from "../componnets/Layout";
 import PrivateRoute from "./PravateRoute";
 
 const Home = lazy(() => import("../pages/Home"));
+const Watchlist = lazy(() => import("../pages/Watchlist"));
 const NotFound = lazy(() => import("../pages/404"));
 const Login = lazy(() => import("../pages/Login"));
 const SignUp = lazy(() => import("../pages/Signup"));
@@ -27,15 +28,15 @@ const routes: AppRoute[] = [
         element: <Home />,
       },
    
-      // {
-      //   path: "/watchlist",
-      //   element: (
-      //     <PrivateRoute
-      //       path="/contact"
-      //       element={< />}
-      //     />
-      //   ),
-      // },
+      {
+        path: "/watchlist",
+        element: (
+          <PrivateRoute
+            path="/contact"
+            element={<Watchlist />}
+          />
+        ),
+      },
     ],
   },
   {
