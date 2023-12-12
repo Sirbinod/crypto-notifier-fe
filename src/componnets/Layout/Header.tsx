@@ -3,6 +3,7 @@ import { FcBullish } from "react-icons/fc";
 import { FiBell, FiHeart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
+import NotificationView from "../NotificationView";
 
 const Header: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -36,6 +37,9 @@ const Header: FC = () => {
                   <FiBell size={24} />
                 </div>
 
+                {/* Dropdown */}
+
+                <NotificationView isOpen={isOpen}/>
               </div>
               <Link to={"/watchlist"}>
                 <div className="hover:cursor-pointer text-xl">
