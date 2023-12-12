@@ -1,5 +1,5 @@
 
-## Project Name
+## Crypto Notifier
 
 **Develop a notification system for cryptocurrencies that monitors price changes and alerts users based on their watchlist.**
 
